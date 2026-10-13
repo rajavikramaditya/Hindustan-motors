@@ -1,8 +1,6 @@
 // Central data for the Hindustan Motors site — one place to update
 // branch contacts, models, and shared links so every section stays in sync.
 
-import inpowerPlusPhoto from '@/assets/inpowerPlusPhoto'
-import inpowerProPhoto from '@/assets/inpowerProPhoto'
 
 export const COMPANY = {
   legalName: 'Hindustan Motors Company',
@@ -262,38 +260,6 @@ export const MODELS = [
       { title: 'पहिए व सस्पेंशन', icon: 'Bike', items: ['कॉइल-स्प्रिंग फ्रंट सस्पेंशन', 'क्रोम अलॉय स्टाइल रियर व्हील', 'चौड़ा फ्रंट टायर'] },
     ],
     specs: [['टाइप', 'लोडर (माल ढुलाई) e-Rickshaw'], ['बॉडी', 'बंद मेटल कार्गो बॉक्स'], ['कलर', 'रेड'], ...COMMON_SPECS],
-  },
-  {
-    slug: 'inpower-plus',
-    brand: 'M-Power',
-    name: 'Inpower Plus',
-    nameHi: 'इनपावर प्लस',
-    icon: 'Zap',
-    img: inpowerPlusPhoto,
-    featured: false,
-    tag: '100-120 km रेंज',
-    desc: 'रोज़ाना शहर में चलने के लिए — एक बार चार्ज में 100-120 km तक रेंज, टॉप स्पीड 25 km/hr तक।',
-    points: ['100-120 km रेंज प्रति चार्ज', 'EASTMAN/LIVGUARD बैटरी', 'FM रेडियो, मोबाइल चार्जर व लगेज स्पेस'],
-    colors: [],
-    groups: [],
-    features: ['100-120 km रेंज प्रति चार्ज', 'टॉप स्पीड 25 km/hr तक', 'EASTMAN/LIVGUARD बैटरी', 'FM रेडियो', 'मोबाइल चार्जर', 'लगेज स्पेस'],
-    specs: [['ब्रांड', 'M-Power'], ['रेंज', '100-120 km प्रति चार्ज'], ['टॉप स्पीड', '25 km/hr तक'], ['बैटरी', 'EASTMAN / LIVGUARD'], ['कीमत', 'शोरूम पर संपर्क करें']],
-  },
-  {
-    slug: 'inpower-pro',
-    brand: 'M-Power',
-    name: 'Inpower Pro',
-    nameHi: 'इनपावर प्रो',
-    icon: 'Award',
-    img: inpowerProPhoto,
-    featured: false,
-    tag: '1100 वॉट मोटर',
-    desc: 'ज़्यादा माइलेज और मजबूती चाहने वालों के लिए — पावरफुल मोटर और ब्रांडेड टायर के साथ।',
-    points: ['1100 वॉट पावरफुल मोटर', 'ब्रांडेड टायर (TVS/CEAT/RALCO)', 'वारंटी-बैक्ड मोटर व मजबूत सस्पेंशन'],
-    colors: [],
-    groups: [],
-    features: ['1100 वॉट पावरफुल मोटर', 'ब्रांडेड टायर (TVS/CEAT/RALCO)', 'वारंटी-बैक्ड मोटर', 'मजबूत सस्पेंशन'],
-    specs: [['ब्रांड', 'M-Power'], ['मोटर', '1100 वॉट'], ['टायर', 'TVS / CEAT / RALCO'], ['कीमत', 'शोरूम पर संपर्क करें']],
   },
 ]
 

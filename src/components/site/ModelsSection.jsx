@@ -19,7 +19,7 @@ export default function ModelsSection() {
             हर ज़रूरत के लिए सही e-Rickshaw
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Badshah व M-Power ब्रांड के अधिकृत डीलर — हर मॉडल की लाइव डेमो अपने नज़दीकी शोरूम पर देखें।
+            Badshah के अधिकृत डीलर — हर मॉडल की लाइव डेमो अपने नज़दीकी शोरूम पर देखें।
           </p>
         </div>
 
