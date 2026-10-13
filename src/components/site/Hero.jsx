@@ -63,7 +63,7 @@ export default function Hero() {
             <span className="text-sm font-semibold text-primary-foreground/90">से डाउन पेमेंट शुरू</span>
             <span className="mx-1 hidden h-5 w-px bg-white/30 sm:block" />
             <span className="rounded-full bg-chart-3 px-3 py-1 text-xs font-extrabold text-primary">
-              0% ब्याज दर पर EMI
+              Affordable EMI पर E-Rickshaw
             </span>
           </div>
 
