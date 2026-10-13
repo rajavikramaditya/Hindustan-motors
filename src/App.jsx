@@ -24,13 +24,13 @@ export default function App() {
   return (
     <ThemeProvider>
       <TooltipProvider>
-        <div className="min-h-screen bg-background">
+        <div className={`min-h-screen bg-background ${path.startsWith('/models/') ? 'pb-16 md:pb-0' : ''}`}>
           <Header path={path} />
           <main>
             <Page path={path} />
           </main>
           <Footer />
-          <WhatsAppFab />
+          <WhatsAppFab hideOnMobile={path.startsWith('/models/')} />
         </div>
         <Toaster position="top-right" richColors closeButton duration={3000} />
       </TooltipProvider>

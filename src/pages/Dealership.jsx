@@ -7,7 +7,7 @@ const PERKS = [
   { icon: 'Percent', title: 'फाइनेंस सपोर्ट', desc: 'ग्राहकों के लिए आसान फाइनेंस, 0% ब्याज EMI व्यवस्था।' },
   { icon: 'FileCheck2', title: 'RTO रजिस्ट्रेशन', desc: 'रजिस्ट्रेशन की पूरी प्रक्रिया में हमारी टीम का साथ।' },
   { icon: 'Wrench', title: 'सर्विस बैकअप', desc: 'फ्री सर्विस व गारंटी — ग्राहक का भरोसा आपके साथ।' },
-  { icon: 'Bike', title: 'Badshah व M-Power रेंज', desc: 'बिकने वाले 8 मॉडल्स, हर बजट व ज़रूरत के लिए।' },
+  { icon: 'Bike', title: 'Badshah की पूरी रेंज', desc: '6 मॉडल्स — पैसेंजर से लोडर तक, हर ज़रूरत के लिए।' },
 ]
 
 export default function Dealership() {
