@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import ApperIcon from '@/components/ApperIcon'
 import { Button } from '@/components/ui/button'
 import ModelCard from '@/components/site/ModelCard'
@@ -7,6 +8,12 @@ import { COMPANY, MODELS, SERVICES, buildCallLink, getModel, modelWhatsApp } fro
 
 export default function ModelDetail({ slug }) {
   const model = getModel(slug)
+  const [active, setActive] = useState(0)
+  const [lastSlug, setLastSlug] = useState(slug)
+  if (slug !== lastSlug) {
+    setLastSlug(slug)
+    setActive(0)
+  }
 
   if (!model) {
     return (
@@ -40,7 +47,26 @@ export default function ModelDetail({ slug }) {
                 controls
               />
             ) : (
-              <img src={model.img} alt={model.name} className="aspect-square w-full bg-muted object-contain" />
+              <img
+                src={model.gallery?.[active] ?? model.img}
+                alt={model.name}
+                className="aspect-square w-full bg-muted object-contain"
+              />
+            )}
+            {!model.video && model.gallery?.length > 1 && (
+              <div className="flex gap-2 border-t border-border bg-card p-3">
+                {model.gallery.map((src, i) => (
+                  <button
+                    key={src}
+                    type="button"
+                    onClick={() => setActive(i)}
+                    className={`h-16 w-16 overflow-hidden rounded-lg border-2 ${i === active ? 'border-primary' : 'border-border'}`}
+                    aria-label={`फोटो ${i + 1}`}
+                  >
+                    <img src={src} alt="" className="h-full w-full object-cover" />
+                  </button>
+                ))}
+              </div>
             )}
           </div>
 
