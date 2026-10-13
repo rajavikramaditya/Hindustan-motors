@@ -1,5 +1,4 @@
 import Hero from '@/components/site/Hero'
-import LineupBanner from '@/components/site/LineupBanner'
 import AboutSection from '@/components/site/AboutSection'
 import ModelsSection from '@/components/site/ModelsSection'
 import ServicesSection from '@/components/site/ServicesSection'
@@ -12,7 +11,6 @@ export default function Home() {
     <>
       <Hero />
       <ModelsSection />
-      <LineupBanner />
       <AboutSection />
       <ServicesSection />
       <BranchesSection />

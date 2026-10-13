@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import ApperIcon from '@/components/ApperIcon'
 import { Button } from '@/components/ui/button'
+import HeroClips from '@/components/site/HeroClips'
 import { Link } from '@/lib/router'
-import { COMPANY, HERO_VIDEO, buildWhatsAppLink } from '@/lib/siteData'
+import { COMPANY, HERO_CLIPS, buildWhatsAppLink } from '@/lib/siteData'
 
 const STATS = [
   { icon: 'Store', label: '11 शोरूम', sub: 'बुंदेलखंड क्षेत्र में' },
@@ -11,11 +13,23 @@ const STATS = [
 ]
 
 export default function Hero() {
+  const [clip, setClip] = useState(HERO_CLIPS[0])
+
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-br from-sidebar via-sidebar to-primary text-primary-foreground"
+      className="relative overflow-hidden text-primary-foreground"
+      style={{ backgroundColor: clip.bg, transition: 'background-color 700ms ease' }}
     >
+      {/* dark navy wash behind the text; clear over the video so the clip blends in */}
+      <div
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+        style={{ background: 'linear-gradient(90deg, rgba(8,24,60,.94) 0%, rgba(8,24,60,.84) 42%, rgba(8,24,60,0) 62%)' }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 lg:hidden"
+        style={{ background: 'linear-gradient(180deg, rgba(8,24,60,.94) 0%, rgba(8,24,60,.86) 48%, rgba(8,24,60,0) 66%)' }}
+      />
       <div className="pointer-events-none absolute inset-0 opacity-[0.12]">
         <svg width="100%" height="100%" preserveAspectRatio="none">
           <defs>
@@ -83,30 +97,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-chart-3/40 to-primary/40 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/20 bg-black shadow-lg">
-            <video
-              className="aspect-square w-full object-cover"
-              src={HERO_VIDEO.src}
-              poster={HERO_VIDEO.poster}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
-            <Link
-              to="/models/smart"
-              className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-black/65 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur"
-            >
-              <span>Badshah Smart SS</span>
-              <span className="inline-flex items-center gap-1 text-chart-3">
-                डिटेल देखें <ApperIcon name="ArrowRight" className="h-4 w-4" />
-              </span>
-            </Link>
-          </div>
-        </div>
+        <HeroClips onClipChange={setClip} />
       </div>
       <div className="relative border-t border-white/10 bg-black/20">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-4 py-5 sm:px-6 lg:grid-cols-4">

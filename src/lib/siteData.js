@@ -302,7 +302,12 @@ export const modelWhatsApp = (m) => buildWhatsAppLink(COMPANY.customerCareNumber
 
 export const LINEUP_IMAGE = '/models/lineup.jpg'
 export const ABOUT_IMAGE = '/models/about-us.jpg' // full original group photo with the "About Us" banner
-export const HERO_VIDEO = { src: '/video/badshah-smart-ss.mp4', poster: '/video/badshah-smart-ss-poster.jpg' }
+// Hero clips play one after another, in this order, then loop.
+export const HERO_CLIPS = [
+  { src: '/video/smart-ss.mp4', poster: '/video/smart-ss.jpg', name: 'Badshah Smart SS', to: '/models/smart', bg: '#DE6448' },
+  { src: '/video/royal-queen.mp4', poster: '/video/royal-queen.jpg', name: 'Badshah Queen', to: '/models/queen', bg: '#42DEF1' },
+  { src: '/video/royal-smart.mp4', poster: '/video/royal-smart.jpg', name: 'Badshah Royal Smart', to: '/models/royal-smart', bg: '#12E19B' },
+]
 
 export const SERVICES = [
   {
