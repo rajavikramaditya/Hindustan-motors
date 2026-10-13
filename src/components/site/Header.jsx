@@ -23,13 +23,24 @@ export default function Header({ path }) {
   const isActive = (to) => to === path || (to !== '/' && !to.includes('#') && path.startsWith(to))
 
   return (
-    <header className="sticky top-0 z-sticky border-b border-border bg-card/95 backdrop-blur">
+    <header className="sticky top-0 z-sticky bg-card/95 shadow-sm backdrop-blur">
+      <div className="bg-gradient-to-r from-sidebar via-primary to-sidebar text-primary-foreground">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5 text-xs font-semibold sm:px-6">
+          <span className="truncate">
+            <span className="text-chart-3">₹34,999</span> से डाउन पेमेंट · 0% ब्याज पर EMI
+          </span>
+          <a href={buildCallLink(COMPANY.customerCareNumber)} className="inline-flex shrink-0 items-center gap-1.5 hover:text-chart-3">
+            <ApperIcon name="Phone" className="h-3.5 w-3.5" />
+            {COMPANY.customerCareNumber}
+          </a>
+        </div>
+      </div>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-3">
           <Logo />
           <span className="leading-tight">
             <span className="block font-heading text-lg font-extrabold text-foreground sm:text-xl">हिंदुस्तान मोटर्स</span>
-            <span className="hidden text-xs font-medium text-muted-foreground sm:block">Badshah · M-Power अधिकृत डीलर</span>
+            <span className="hidden text-xs font-medium text-muted-foreground sm:block">Badshah अधिकृत डीलर</span>
           </span>
         </Link>
 
@@ -71,6 +82,8 @@ export default function Header({ path }) {
           <ApperIcon name={menuOpen ? 'X' : 'Menu'} className="h-5 w-5" />
         </button>
       </div>
+
+      <div className="h-[3px] bg-gradient-to-r from-chart-3 via-accent to-primary" />
 
       {menuOpen && (
         <div className="border-t border-border bg-card px-4 py-4 lg:hidden">
