@@ -44,7 +44,7 @@ export default function ModelDetail({ slug }) {
   const slides = hasVideo ? [null, ...gallery] : gallery
 
   return (
-    <>
+    <div>
       <PageHero eyebrow={`${model.brand} · ${model.tag ?? 'e-Rickshaw'}`} title={model.nameHi} subtitle={model.name} />
 
       <section className="bg-background py-12 sm:py-16">
@@ -244,7 +244,7 @@ export default function ModelDetail({ slug }) {
         </div>
       </section>
 
-      <div className="sticky bottom-0 z-sticky flex gap-2 border-t border-border bg-card/95 p-3 backdrop-blur md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-sticky flex gap-2 border-t border-border bg-card/95 p-3 backdrop-blur md:hidden">
         <a href={buildCallLink(COMPANY.customerCareNumber)} className="flex-1">
           <Button variant="outline" className="w-full gap-2 border-primary/30 font-semibold text-primary">
             <ApperIcon name="Phone" className="h-4 w-4" /> कॉल
@@ -256,6 +256,6 @@ export default function ModelDetail({ slug }) {
           </Button>
         </a>
       </div>
-    </>
+    </div>
   )
 }

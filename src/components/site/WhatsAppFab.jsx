@@ -1,7 +1,7 @@
 import ApperIcon from '@/components/ApperIcon'
 import { COMPANY, buildWhatsAppLink } from '@/lib/siteData'
 
-export default function WhatsAppFab() {
+export default function WhatsAppFab({ hideOnMobile = false }) {
   return (
     <a
       href={buildWhatsAppLink(
@@ -10,7 +10,7 @@ export default function WhatsAppFab() {
       )}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-5 right-5 z-tooltip flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg transition-transform duration-fast hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:bottom-8 sm:right-8"
+      className={`${hideOnMobile ? 'max-md:hidden ' : ''}fixed bottom-5 right-5 z-tooltip flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg transition-transform duration-fast hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:bottom-8 sm:right-8`}
       aria-label="WhatsApp पर संपर्क करें"
     >
       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40" />
