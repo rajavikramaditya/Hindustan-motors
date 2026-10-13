@@ -7,7 +7,7 @@ import { COMPANY, HERO_CLIPS, buildWhatsAppLink } from '@/lib/siteData'
 
 const STATS = [
   { icon: 'Store', label: '11 शोरूम', sub: 'बुंदेलखंड क्षेत्र में' },
-  { icon: 'Award', label: '2 प्रमुख ब्रांड', sub: 'Badshah व M-Power' },
+  { icon: 'Award', label: '6 मॉडल', sub: 'Badshah e-Rickshaw' },
   { icon: 'Wrench', label: '3 महीने फ्री सर्विस', sub: 'ऑयल सहित' },
   { icon: 'ShieldCheck', label: '1 महीने की गारंटी', sub: 'हर गाड़ी पर' },
 ]
