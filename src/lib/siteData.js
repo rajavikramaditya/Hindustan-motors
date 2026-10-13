@@ -243,6 +243,7 @@ export const getModel = (slug) => MODELS.find((m) => m.slug === slug)
 export const modelWhatsApp = (m) => buildWhatsAppLink(COMPANY.customerCareNumber, WA(`${m.nameHi} (${m.name})`))
 
 export const LINEUP_IMAGE = '/models/lineup.jpg'
+export const ABOUT_IMAGE = '/models/about-us.jpg' // full original group photo with the "About Us" banner
 export const HERO_VIDEO = { src: '/video/badshah-smart-ss.mp4', poster: '/video/badshah-smart-ss-poster.jpg' }
 
 export const SERVICES = [
