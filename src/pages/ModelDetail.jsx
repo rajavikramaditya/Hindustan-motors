@@ -118,7 +118,7 @@ export default function ModelDetail({ slug }) {
             )}
 
             <p className="mt-4 text-sm font-semibold text-foreground">
-              ₹34,999 से डाउन पेमेंट · 0% EMI · <span className="text-muted-foreground">कीमत शोरूम पर</span>
+              ₹34,999 से डाउन पेमेंट · Affordable EMI · <span className="text-muted-foreground">कीमत शोरूम पर</span>
             </p>
 
             <div className="mt-3 flex flex-wrap gap-2">
