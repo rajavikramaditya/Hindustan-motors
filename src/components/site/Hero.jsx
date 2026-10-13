@@ -97,7 +97,7 @@ export default function Hero() {
               preload="metadata"
             />
             <Link
-              to="/models/smart-ss"
+              to="/models/smart"
               className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-black/65 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur"
             >
               <span>Badshah Smart SS</span>

@@ -14,7 +14,7 @@ export default function Models() {
       <PageHero
         eyebrow="हमारे मॉडल्स"
         title="Badshah व M-Power e-Rickshaw की पूरी रेंज"
-        subtitle="स्टेनलेस स्टील से लेकर फुल-फीचर्ड मॉडल तक — अपने रूट और बजट के हिसाब से चुनें। हर मॉडल पर फाइनेंस, RTO व फ्री सर्विस।"
+        subtitle="पैसेंजर से लेकर लोडर तक — अपने रूट और काम के हिसाब से चुनें। हर मॉडल पर फाइनेंस, RTO व फ्री सर्विस।"
       />
       <section className="bg-background py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

@@ -13,7 +13,7 @@ export default function ModelsSection() {
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-semibold text-secondary-foreground">
             <ApperIcon name="Bike" className="h-4 w-4" />
-            नए व पॉपुलर मॉडल
+            Badshah के 6 मॉडल
           </span>
           <h2 className="mt-4 font-heading text-3xl font-extrabold text-foreground sm:text-4xl">
             हर ज़रूरत के लिए सही e-Rickshaw
