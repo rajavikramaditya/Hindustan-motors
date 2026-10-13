@@ -6,7 +6,7 @@ export default function DealerCTA() {
   return (
     <section className="bg-background py-4 sm:py-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex flex-col items-center gap-5 rounded-3xl bg-gradient-to-r from-accent to-secondary-foreground/90 px-6 py-10 text-center text-accent-foreground shadow-md sm:flex-row sm:justify-between sm:text-left">
+        <div className="flex flex-col items-center gap-5 rounded-3xl bg-gradient-to-r from-primary to-sidebar px-6 py-10 text-center text-accent-foreground shadow-md sm:flex-row sm:justify-between sm:text-left">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold">
               <ApperIcon name="Store" className="h-4 w-4" />
@@ -29,7 +29,7 @@ export default function DealerCTA() {
             rel="noreferrer"
             className="shrink-0"
           >
-            <Button size="lg" className="gap-2 bg-white font-bold text-accent hover:bg-white/90">
+            <Button size="lg" className="gap-2 bg-chart-3 font-bold text-primary hover:bg-chart-3/90">
               <ApperIcon name="MessageCircle" className="h-5 w-5" />
               डीलर बनें
             </Button>

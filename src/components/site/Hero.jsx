@@ -1,6 +1,7 @@
 import ApperIcon from '@/components/ApperIcon'
 import { Button } from '@/components/ui/button'
-import { COMPANY, buildWhatsAppLink } from '@/lib/siteData'
+import { Link } from '@/lib/router'
+import { COMPANY, HERO_VIDEO, buildWhatsAppLink } from '@/lib/siteData'
 
 const STATS = [
   { icon: 'Store', label: '11 शोरूम', sub: 'बुंदेलखंड क्षेत्र में' },
@@ -13,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-secondary-foreground/90 text-primary-foreground"
+      className="relative overflow-hidden bg-gradient-to-br from-sidebar via-sidebar to-primary text-primary-foreground"
     >
       <div className="pointer-events-none absolute inset-0 opacity-[0.12]">
         <svg width="100%" height="100%" preserveAspectRatio="none">
@@ -69,28 +70,56 @@ export default function Hero() {
                 WhatsApp पर पूछें
               </Button>
             </a>
-            <a href="#branches">
+            <Link to="/models">
               <Button
                 size="lg"
                 variant="outline"
                 className="gap-2 border-white/40 bg-white/5 font-semibold text-primary-foreground hover:bg-white/15"
               >
-                <ApperIcon name="MapPin" className="h-5 w-5" />
-                नज़दीकी शोरूम देखें
+                <ApperIcon name="Bike" className="h-5 w-5" />
+                सभी मॉडल देखें
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-chart-3/40 to-primary/40 blur-2xl" />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/20 bg-black shadow-lg">
+            <video
+              className="aspect-square w-full object-cover"
+              src={HERO_VIDEO.src}
+              poster={HERO_VIDEO.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+            <Link
+              to="/models/smart-ss"
+              className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-black/65 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur"
+            >
+              <span>Badshah Smart SS</span>
+              <span className="inline-flex items-center gap-1 text-chart-3">
+                डिटेल देखें <ApperIcon name="ArrowRight" className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="relative border-t border-white/10 bg-black/20">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-4 py-5 sm:px-6 lg:grid-cols-4">
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl bg-white/10 p-4 shadow-sm backdrop-blur-sm transition-transform duration-fast hover:-translate-y-0.5 sm:p-5"
+              className="flex items-center gap-3 rounded-xl bg-white/5 p-3"
             >
               <ApperIcon name={stat.icon} className="h-6 w-6 text-chart-3" />
-              <p className="mt-3 font-heading text-lg font-bold leading-tight sm:text-xl">{stat.label}</p>
-              <p className="text-xs text-primary-foreground/75">{stat.sub}</p>
+              <div>
+                <p className="font-heading text-sm font-bold leading-tight sm:text-base">{stat.label}</p>
+                <p className="text-xs text-primary-foreground/75">{stat.sub}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -1,4 +1,6 @@
 import ApperIcon from '@/components/ApperIcon'
+import Logo from '@/components/site/Logo'
+import { Link } from '@/lib/router'
 import { COMPANY, buildCallLink, buildWhatsAppLink } from '@/lib/siteData'
 
 export default function Footer() {
@@ -10,9 +12,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-sidebar-primary font-heading text-sm font-extrabold text-sidebar-primary-foreground">
-                HM
-              </span>
+              <Logo className="h-10 w-10" />
               <span className="font-heading text-lg font-extrabold">हिंदुस्तान मोटर्स</span>
             </div>
             <p className="mt-3 text-sm text-sidebar-foreground/75">हर सफर में भरोसा</p>
@@ -30,11 +30,13 @@ export default function Footer() {
               क्विक लिंक
             </h4>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><a href="#about" className="text-sidebar-foreground/80 hover:text-sidebar-primary">हमारे बारे में</a></li>
-              <li><a href="#models" className="text-sidebar-foreground/80 hover:text-sidebar-primary">मॉडल्स</a></li>
-              <li><a href="#services" className="text-sidebar-foreground/80 hover:text-sidebar-primary">सुविधाएं</a></li>
-              <li><a href="#branches" className="text-sidebar-foreground/80 hover:text-sidebar-primary">शोरूम</a></li>
-              <li><a href="#contact" className="text-sidebar-foreground/80 hover:text-sidebar-primary">संपर्क करें</a></li>
+              <li><Link to="/" className="text-sidebar-foreground/80 hover:text-sidebar-primary">होम</Link></li>
+              <li><Link to="/models" className="text-sidebar-foreground/80 hover:text-sidebar-primary">सभी मॉडल्स</Link></li>
+              <li><Link to="/about" className="text-sidebar-foreground/80 hover:text-sidebar-primary">हमारे बारे में</Link></li>
+              <li><Link to="/#services" className="text-sidebar-foreground/80 hover:text-sidebar-primary">सुविधाएं</Link></li>
+              <li><Link to="/#branches" className="text-sidebar-foreground/80 hover:text-sidebar-primary">शोरूम</Link></li>
+              <li><Link to="/dealership" className="text-sidebar-foreground/80 hover:text-sidebar-primary">डीलर बनें</Link></li>
+              <li><Link to="/#contact" className="text-sidebar-foreground/80 hover:text-sidebar-primary">संपर्क करें</Link></li>
             </ul>
           </div>
 
