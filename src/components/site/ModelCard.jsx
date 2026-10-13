@@ -6,7 +6,7 @@ import { modelWhatsApp } from '@/lib/siteData'
 export default function ModelCard({ model }) {
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-normal hover:-translate-y-1 hover:shadow-lg">
-      <Link to={`/models/${model.slug}`} className="relative block aspect-[4/3] w-full overflow-hidden bg-muted">
+      <Link to={`/models/${model.slug}`} className="relative block aspect-square w-full overflow-hidden bg-muted">
         <img
           src={model.img}
           alt={`${model.name} e-Rickshaw`}
