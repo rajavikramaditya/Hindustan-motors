@@ -5,11 +5,21 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem('app-theme') || APP_CONFIG.defaultTheme || 'system'
+    () => {
+      try {
+        return localStorage.getItem('app-theme') || APP_CONFIG.defaultTheme || 'system';
+      } catch {
+        return APP_CONFIG.defaultTheme || 'system';
+      }
+    }
   );
 
   useEffect(() => {
-    localStorage.setItem('app-theme', theme);
+    try {
+      localStorage.setItem('app-theme', theme);
+    } catch {
+      /* storage blocked: theme still applies for this visit */
+    }
 
     const apply = () => {
       const isDark =

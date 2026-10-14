@@ -90,6 +90,28 @@ export default function ContactSection() {
           </p>
         </div>
 
+        <address className="mx-auto mt-8 grid max-w-3xl gap-3 rounded-2xl border border-border bg-card p-5 text-sm not-italic shadow-sm sm:grid-cols-2">
+          <div>
+            <p className="font-heading text-base font-bold text-foreground">{COMPANY.legalName}</p>
+            <p className="mt-1 text-muted-foreground">{COMPANY.hqAddress}</p>
+            <p className="mt-1 text-xs text-muted-foreground">GSTIN: {COMPANY.gstin}</p>
+          </div>
+          <div className="space-y-1.5">
+            <a href={buildCallLink(COMPANY.customerCareNumber)} className="flex items-center gap-2 font-semibold text-foreground hover:text-primary">
+              <ApperIcon name="Phone" className="h-4 w-4 text-accent" />
+              {COMPANY.customerCareNumber}
+            </a>
+            <p className="flex items-center gap-2 text-muted-foreground">
+              <ApperIcon name="Headset" className="h-4 w-4 text-accent" />
+              समय: {COMPANY.hours}
+            </p>
+            <p className="flex flex-wrap gap-x-4 text-xs">
+              <a href="/contact" className="font-semibold text-primary underline">सभी शोरूम व संपर्क</a>
+              <a href="/privacy-policy" className="font-semibold text-primary underline">Privacy Policy</a>
+            </p>
+          </div>
+        </address>
+
         <div className="mt-10 rounded-3xl border border-border bg-card p-5 shadow-sm sm:p-8">
           <Tabs defaultValue="inquiry">
             <TabsList className="grid w-full grid-cols-2">

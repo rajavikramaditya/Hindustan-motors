@@ -48,7 +48,9 @@ export default function Footer() {
               <ApperIcon name="MapPin" className="mt-0.5 h-4 w-4 shrink-0" />
               {COMPANY.hqAddress}
             </p>
-            <p className="mt-2 text-xs text-sidebar-foreground/60">GSTIN: {COMPANY.gstin}</p>
+            <p className="mt-2 text-xs text-sidebar-foreground/70">{COMPANY.legalName}</p>
+            <p className="mt-1 text-xs text-sidebar-foreground/70">समय: {COMPANY.hours}</p>
+            <p className="mt-1 text-xs text-sidebar-foreground/70">GSTIN: {COMPANY.gstin}</p>
           </div>
 
           <div>
@@ -76,7 +78,11 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-sidebar-border pt-6 text-xs text-sidebar-foreground/60 sm:flex-row">
           <p>© {year} {COMPANY.legalName}. सर्वाधिकार सुरक्षित।</p>
-          <p>Website by Orbit Global</p>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href="/contact" className="hover:text-sidebar-primary">संपर्क</a>
+            <a href="/privacy-policy" className="hover:text-sidebar-primary">Privacy Policy</a>
+            <span>Website by Orbit Global</span>
+          </p>
         </div>
       </div>
     </footer>

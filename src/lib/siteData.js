@@ -11,6 +11,8 @@ export const COMPANY = {
   mdName: 'Rustam Mansoori',
   mdTitle: 'Managing Director',
   customerCareNumber: '9140485988',
+  hours: '10 AM – 7 PM (सातों दिन)',
+  siteUrl: 'https://hindustanmoters.in',
   distributorTags: ['Bundelkhand Distributor', 'Bundelkhand Service'],
   brands: ['Badshah', 'M-Power'],
 };

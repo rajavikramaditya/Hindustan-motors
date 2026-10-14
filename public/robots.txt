@@ -1,0 +1,11 @@
+# All crawlers (including Googlebot and AdsBot-Google) may crawl the whole site.
+User-agent: *
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://hindustanmoters.in/sitemap.xml
