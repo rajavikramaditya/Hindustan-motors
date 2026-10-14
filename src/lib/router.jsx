@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 // Tiny hash router (#/models/chetak) so the site works on any static host
 // without server rewrites. "#/#services" = home page + scroll to a section.
 function parse() {
+  if (typeof window === 'undefined') return { path: '/', section: null }
   const raw = window.location.hash.replace(/^#/, '') || '/'
   const [path, section] = raw.split('#')
   return { path: path || '/', section: section || null }
